@@ -62,6 +62,8 @@ You can set the content you want by using the filter "pinim_get_post_content", s
 
 == Screenshots ==
 
+1. Boards settings
+
 
 == Changelog ==
 
