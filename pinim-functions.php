@@ -27,7 +27,7 @@
 
      if (!isset($raw_pin['images'])) return $raw_pin;
 
-     if ($raw_pin['images']['orig']['url']){ //get best resolution
+     if (isset($raw_pin['images']['orig']['url'])){ //get best resolution
          $image = $raw_pin['images']['orig'];
      }else{ //get first array item
          $first_key = array_values($raw_pin['images']);
@@ -94,7 +94,7 @@
 
  function pin_raw_data_remove_self_pinner($raw_pin){
      if (!isset($raw_pin['pinner'])) return $raw_pin;
-     $user_datas = pinim()->get_session_data('user_datas');
+     $user_datas = pinim_tool_page()->get_session_data('user_datas');
 
      if ($raw_pin['pinner']['username'] != $user_datas['username']) return $raw_pin;
 
